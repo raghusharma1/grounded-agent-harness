@@ -1,0 +1,25 @@
+{"id": "cache-aside", "question": "How does cache-aside loading work and what is its downside?", "sources": ["caching"], "answerable": true}
+{"id": "stampede", "question": "What can I do when a popular cache key expires and the database gets flooded with requests?", "sources": ["caching"], "answerable": true}
+{"id": "lru-vs-lfu", "question": "When would LFU eviction be better than evicting the least recently touched item?", "sources": ["caching"], "answerable": true}
+{"id": "l4-l7", "question": "What is the difference between layer 4 and layer 7 load balancers?", "sources": ["load-balancing"], "answerable": true}
+{"id": "uneven-requests", "question": "Which balancing algorithm copes best when some requests take much longer than others?", "sources": ["load-balancing"], "answerable": true}
+{"id": "sticky", "question": "Why are sticky sessions a problem for failover, and what replaces them?", "sources": ["load-balancing"], "answerable": true}
+{"id": "token-bucket", "question": "How does a token bucket allow bursts while still enforcing an average rate?", "sources": ["rate-limiting"], "answerable": true}
+{"id": "fixed-window-flaw", "question": "Why can a fixed window counter let a client briefly send double its quota?", "sources": ["rate-limiting"], "answerable": true}
+{"id": "status-code", "question": "What HTTP status and header should a rate limited request get?", "sources": ["rate-limiting"], "answerable": true}
+{"id": "modulo", "question": "Why does hash mod N cause problems when servers are added to a cache cluster?", "sources": ["consistent-hashing"], "answerable": true}
+{"id": "virtual-nodes", "question": "What do virtual nodes improve on a hash ring?", "sources": ["consistent-hashing"], "answerable": true}
+{"id": "range-query", "question": "Can a hash index serve a range query, and what index type should I use instead?", "sources": ["database-indexing"], "answerable": true}
+{"id": "leftmost-prefix", "question": "Will an index on (last_name, first_name) speed up a query that filters only by first_name?", "sources": ["database-indexing"], "answerable": true}
+{"id": "exactly-once", "question": "How do systems get the effect of exactly-once processing from a message queue?", "sources": ["message-queues"], "answerable": true}
+{"id": "kafka-vs-sqs", "question": "How does a log like Kafka differ from a queue like SQS for multiple consumers?", "sources": ["message-queues"], "answerable": true}
+{"id": "poison-message", "question": "What should happen to a message that keeps failing processing?", "sources": ["message-queues"], "answerable": true}
+{"id": "k8s", "question": "How does the Kubernetes scheduler decide which node a pod runs on?", "sources": [], "answerable": false}
+{"id": "raft", "question": "How does Raft elect a leader in a distributed cluster?", "sources": [], "answerable": false}
+{"id": "cdn-pricing", "question": "How much does a CDN typically charge per gigabyte?", "sources": [], "answerable": false}
+{"id": "para-lru", "question": "Which policy throws out whatever nobody has read for the longest time?", "sources": ["caching"], "answerable": true}
+{"id": "para-retry-after", "question": "My API is rejecting clients that call too often. How should the reply tell them when they can come back?", "sources": ["rate-limiting"], "answerable": true}
+{"id": "para-idempotent", "question": "How do I stop a consumer from charging a customer twice if it receives the same event again?", "sources": ["message-queues"], "answerable": true}
+{"id": "para-covering", "question": "Is there a way for the database to answer a query without touching the table rows at all?", "sources": ["database-indexing"], "answerable": true}
+{"id": "para-ring-move", "question": "With a ring-based scheme, roughly how much data has to move when one more machine joins?", "sources": ["consistent-hashing"], "answerable": true}
+{"id": "para-path-routing", "question": "How can I send /api traffic and /static traffic to different groups of servers?", "sources": ["load-balancing"], "answerable": true}

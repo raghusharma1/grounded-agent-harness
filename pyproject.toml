@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grounded-agent-harness"
+version = "0.1.0"
+description = "A small agent harness that answers only from retrieved evidence: hybrid RAG, scoped tools, citation verification, and an eval suite."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Raghu Sharma" }]
+dependencies = [
+    "anthropic>=2.1",
+    "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+embeddings = ["fastembed>=0.4"]
+faiss = ["faiss-cpu>=1.8"]
+
+[project.scripts]
+grounded = "grounded.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["grounded*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
