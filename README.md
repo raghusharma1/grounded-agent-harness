@@ -60,7 +60,7 @@ RunResult: status, answer, citations, steps, tokens, cost, latency, trace
 | Vectors, `bge-small-en-v1.5` via fastembed | **1.000** | **1.000** |
 | Hybrid with `bge-small-en-v1.5` | **1.000** | **1.000** |
 
-The hashing embedder is deliberately weak (it matches vocabulary, not meaning) and keeps the tests dependency-free; the table shows why the real model matters, and that fusing a weak vector signal can *lower* precision. Reproduce with `grounded --embedder hashing|fastembed eval retrieval -k 1`.
+The hashing embedder is deliberately weak (it matches vocabulary, not meaning) and keeps the tests dependency-free; the table shows why the real model matters, and that fusing a weak vector signal can *lower* precision. Reproduce with `grounded --embedder hashing|fastembed eval retrieval -k 1` for recall@1 and `-k 3` for MRR@3.
 
 **Scoped tools.** Each tool declares a risk level. Inputs are validated against the JSON schema even though tools are sent with `strict: true`. Write tools (here, `save_flashcard`) run only with explicit approval, and a flashcard may only cite chunks retrieved in the same run. Errors go back to the model as `is_error` tool results it can explain, never as crashes.
 
